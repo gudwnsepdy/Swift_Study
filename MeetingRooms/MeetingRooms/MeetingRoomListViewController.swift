@@ -2,7 +2,7 @@
 //  MeetingRoomListViewController.swift
 //  MeetingRooms
 //
-//  Created by 형주 on 2021/05/09.
+//  Created by 형주 on 2021/05/15.
 //
 
 import UIKit
@@ -28,8 +28,8 @@ class MeetingRoomListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        let categoryValues = Array(meetingRooms.values)[section]
-//        let orderedMeetingRooms = meetingRooms.sort({$0.1.first!.1 < $1.1.first!.1})
+        let categoryValues = Array(meetingRooms.values)[section]
+        let orderedMeetingRooms = meetingRooms.sort({$0.1.first!.1 < $1.1.first!.1})
         let rowCount = orderedMeetingRooms[section].1.count
         return rowCount
     }
@@ -78,7 +78,7 @@ class MeetingRoomListViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 

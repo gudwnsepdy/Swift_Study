@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  MeetingRooms
+//  Scatter
 //
-//  Created by 형주 on 2021/05/15.
+//  Created by 형주 on 2021/05/19.
 //
 
 import UIKit
