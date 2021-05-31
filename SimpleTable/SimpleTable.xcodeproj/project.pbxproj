@@ -13,6 +13,8 @@
 		D6A5059C2662B6110023A5F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A5059A2662B6110023A5F9 /* Main.storyboard */; };
 		D6A5059E2662B6120023A5F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6A5059D2662B6120023A5F9 /* Assets.xcassets */; };
 		D6A505A12662B6120023A5F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A5059F2662B6120023A5F9 /* LaunchScreen.storyboard */; };
+		D6A505A92663AB910023A5F9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A505A82663AB910023A5F9 /* CustomTableViewCell.swift */; };
+		D6A505AB2663B8360023A5F9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A505AA2663B8360023A5F9 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D6A5059D2662B6120023A5F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6A505A02662B6120023A5F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6A505A22662B6120023A5F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6A505A82663AB910023A5F9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		D6A505AA2663B8360023A5F9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		D6A505882662B6110023A5F9 = {
 			isa = PBXGroup;
 			children = (
+				D6A505AA2663B8360023A5F9 /* SecondViewController.swift */,
 				D6A505932662B6110023A5F9 /* SimpleTable */,
 				D6A505922662B6110023A5F9 /* Products */,
 			);
@@ -60,6 +65,7 @@
 				D6A505962662B6110023A5F9 /* SceneDelegate.swift */,
 				D6A505982662B6110023A5F9 /* ViewController.swift */,
 				D6A5059A2662B6110023A5F9 /* Main.storyboard */,
+				D6A505A82663AB910023A5F9 /* CustomTableViewCell.swift */,
 				D6A5059D2662B6120023A5F9 /* Assets.xcassets */,
 				D6A5059F2662B6120023A5F9 /* LaunchScreen.storyboard */,
 				D6A505A22662B6120023A5F9 /* Info.plist */,
@@ -139,6 +145,8 @@
 			files = (
 				D6A505992662B6110023A5F9 /* ViewController.swift in Sources */,
 				D6A505952662B6110023A5F9 /* AppDelegate.swift in Sources */,
+				D6A505A92663AB910023A5F9 /* CustomTableViewCell.swift in Sources */,
+				D6A505AB2663B8360023A5F9 /* SecondViewController.swift in Sources */,
 				D6A505972662B6110023A5F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
