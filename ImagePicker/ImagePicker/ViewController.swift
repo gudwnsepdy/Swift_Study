@@ -12,6 +12,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     lazy var imagePicker: UIImagePickerController = {
         let picker: UIImagePickerController =  UIImagePickerController()
         picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
         picker.delegate = self
         return picker
     }()
@@ -28,7 +29,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        if let originalImage: UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        if let originalImage: UIImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             self.imageView.image = originalImage
         }
         

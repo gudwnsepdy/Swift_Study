@@ -93,11 +93,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="384.5" height="139"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugW-9h-FtE">
-                                                    <rect key="frame" x="9" y="5" width="108" height="129"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ugW-9h-FtE">
+                                                    <rect key="frame" x="5" y="5" width="100" height="129"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="L2y-fN-R0c"/>
+                                                        <constraint firstAttribute="height" constant="130" id="gNc-yK-jIT"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w1w-Xz-6lG">
-                                                    <rect key="frame" x="152" y="34" width="41.5" height="71.5"/>
+                                                    <rect key="frame" x="135" y="34" width="41.5" height="71.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vI2-8e-pib">
                                                             <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
@@ -124,6 +128,8 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="ugW-9h-FtE" firstAttribute="top" secondItem="S0Q-UJ-scg" secondAttribute="top" constant="10" id="4NL-JG-0VV"/>
+                                                <constraint firstItem="ugW-9h-FtE" firstAttribute="top" secondItem="S0Q-UJ-scg" secondAttribute="top" constant="100" id="Eg9-09-Z76"/>
                                                 <constraint firstItem="ugW-9h-FtE" firstAttribute="leading" secondItem="S0Q-UJ-scg" secondAttribute="leading" constant="5" id="eLl-G9-JHS"/>
                                                 <constraint firstAttribute="bottom" secondItem="ugW-9h-FtE" secondAttribute="bottom" constant="5" id="jHy-b7-MSg"/>
                                                 <constraint firstItem="w1w-Xz-6lG" firstAttribute="leading" secondItem="ugW-9h-FtE" secondAttribute="trailing" constant="30" id="jfF-nE-rq9"/>

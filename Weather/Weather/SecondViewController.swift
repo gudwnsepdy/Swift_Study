@@ -91,7 +91,7 @@ class SecondViewController: UIViewController,UITableViewDataSource {
             print(error.localizedDescription)
         }
 //        tableView.estimatedRowHeight = 500
-        self.tableView.rowHeight = 80
+//        self.tableView.rowHeight = 80
 //        tableView.rowHeight = UITableView.automaticDimension
         
         self.tableView.reloadData()
