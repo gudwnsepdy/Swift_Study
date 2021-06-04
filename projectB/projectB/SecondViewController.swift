@@ -17,6 +17,13 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
     }()
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var pwtextField: UITextField!
+    @IBOutlet weak var checktextField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var YellowtextView: UITextField!
+    
+    
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -39,6 +46,27 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func pwCheck(_ sender: UITextField) {
+        if sender.tag == 1 {
+            if (sender.text == checktextField.text) && !(YellowtextView.text!.isEmpty){
+                nextButton.isEnabled = true
+            }else {
+                nextButton.isEnabled = false
+            }
+        } else if sender.tag == 2{
+            if (sender.text == pwtextField.text) && !(YellowtextView.text!.isEmpty) {
+                nextButton.isEnabled = true
+            } else {
+                nextButton.isEnabled = false
+            }
+        } else if sender.tag == 3 {
+            if (checktextField.text == pwtextField.text) && !(YellowtextView.text!.isEmpty) {
+                nextButton.isEnabled = true
+            } else {
+                nextButton.isEnabled = false
+            }
+        }
+    }
     
     
     func touchToPickPhoto() {
