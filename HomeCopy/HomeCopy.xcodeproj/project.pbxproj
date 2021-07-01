@@ -13,6 +13,7 @@
 		D67A04D8268CDEF400E68A9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D67A04D6268CDEF400E68A9F /* Main.storyboard */; };
 		D67A04DA268CDEF600E68A9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D67A04D9268CDEF600E68A9F /* Assets.xcassets */; };
 		D67A04DD268CDEF600E68A9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D67A04DB268CDEF600E68A9F /* LaunchScreen.storyboard */; };
+		D67A04E5268D868300E68A9F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A04E4268D868300E68A9F /* CustomCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D67A04D9268CDEF600E68A9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D67A04DC268CDEF600E68A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D67A04DE268CDEF600E68A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D67A04E4268D868300E68A9F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				D67A04D2268CDEF400E68A9F /* SceneDelegate.swift */,
 				D67A04D4268CDEF400E68A9F /* ViewController.swift */,
 				D67A04D6268CDEF400E68A9F /* Main.storyboard */,
+				D67A04E4268D868300E68A9F /* CustomCollectionViewCell.swift */,
 				D67A04D9268CDEF600E68A9F /* Assets.xcassets */,
 				D67A04DB268CDEF600E68A9F /* LaunchScreen.storyboard */,
 				D67A04DE268CDEF600E68A9F /* Info.plist */,
@@ -140,6 +143,7 @@
 				D67A04D5268CDEF400E68A9F /* ViewController.swift in Sources */,
 				D67A04D1268CDEF400E68A9F /* AppDelegate.swift in Sources */,
 				D67A04D3268CDEF400E68A9F /* SceneDelegate.swift in Sources */,
+				D67A04E5268D868300E68A9F /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
