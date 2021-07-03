@@ -43,12 +43,11 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="내사진" translatesAutoresizingMaskIntoConstraints="NO" id="hEw-hM-Ji7">
-                                            <rect key="frame" x="325" y="15" width="35" height="350"/>
+                                            <rect key="frame" x="325" y="20" width="35" height="35"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="5La-Sx-fgi"/>
-                                                <constraint firstAttribute="width" constant="35" id="H79-9R-diX"/>
-                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="NAi-fk-C4e"/>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="vzr-D6-rqV"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="5La-Sx-fgi" userLabel="width = 35"/>
+                                                <constraint firstAttribute="width" constant="35" id="bdr-Q7-Hcf"/>
+                                                <constraint firstAttribute="height" constant="35" id="mbD-Gq-I42"/>
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnC-KT-ukF">
@@ -61,11 +60,8 @@
                                         </button>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="어디로 갈까요?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oxh-mV-2ka">
                                             <rect key="frame" x="15" y="85.666666666666671" width="360" height="34"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="345" id="Y1L-De-rkk"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" textContentType="location"/>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="난 어떤 유형의 운전자일까?!🤓😭🤬" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wef-Bm-W7b">
                                             <rect key="frame" x="15" y="254.66666666666663" width="360" height="35"/>
@@ -116,12 +112,12 @@
                                         <constraint firstItem="BJl-M7-FRB" firstAttribute="top" secondItem="KvU-P9-My0" secondAttribute="bottom" constant="20" id="2p1-eF-SQb"/>
                                         <constraint firstItem="KvU-P9-My0" firstAttribute="leading" secondItem="EOr-3b-PXc" secondAttribute="leading" constant="15" id="5Wy-ss-vxa"/>
                                         <constraint firstItem="vza-nf-jc1" firstAttribute="top" secondItem="KvU-P9-My0" secondAttribute="bottom" constant="20" id="68e-JR-sJL"/>
+                                        <constraint firstItem="hEw-hM-Ji7" firstAttribute="top" secondItem="EOr-3b-PXc" secondAttribute="top" constant="20" id="6Qi-OS-Osq"/>
                                         <constraint firstAttribute="trailing" secondItem="KvU-P9-My0" secondAttribute="trailing" constant="15" id="7PX-Rz-bXK"/>
                                         <constraint firstItem="KvU-P9-My0" firstAttribute="top" secondItem="wef-Bm-W7b" secondAttribute="bottom" constant="20" id="CKX-XL-gUb"/>
                                         <constraint firstItem="Tkh-oH-UTf" firstAttribute="top" secondItem="EOr-3b-PXc" secondAttribute="top" constant="19" id="DrD-vp-nVN"/>
                                         <constraint firstAttribute="trailing" secondItem="vza-nf-jc1" secondAttribute="trailing" constant="20" id="FvK-QS-frV"/>
                                         <constraint firstAttribute="trailing" secondItem="wef-Bm-W7b" secondAttribute="trailing" constant="15" id="G3b-Re-ttk"/>
-                                        <constraint firstItem="hEw-hM-Ji7" firstAttribute="top" secondItem="EOr-3b-PXc" secondAttribute="top" constant="15" id="LKc-ZX-MZq"/>
                                         <constraint firstAttribute="trailing" secondItem="oxh-mV-2ka" secondAttribute="trailing" constant="15" id="MWW-Kc-e32"/>
                                         <constraint firstItem="YHV-uu-PQk" firstAttribute="top" secondItem="EOr-3b-PXc" secondAttribute="top" constant="45" id="RiG-aV-KHS"/>
                                         <constraint firstItem="HnC-KT-ukF" firstAttribute="top" secondItem="oxh-mV-2ka" secondAttribute="bottom" constant="15" id="Rje-BY-gwr"/>
@@ -208,6 +204,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="KjF-Dj-ty3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JxW-B3-h5J">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
