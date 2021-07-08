@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tQm-kV-12t">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fbB-kr-Zdc">
+            <objects>
+                <navigationController id="tQm-kV-12t" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XNW-pw-n4o">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dSN-XG-Nxx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCu-5S-N6Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-945" y="-367"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -29,7 +45,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="7RK-8i-7oH" customClass="ImageCollectionViewCell" customModule="prac_collectionView" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="7" width="183" height="234"/>
+                                        <rect key="frame" x="0.0" y="-2" width="183" height="234"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0lb-nx-u3n">
                                             <rect key="frame" x="0.0" y="0.0" width="183" height="234"/>
@@ -102,14 +118,203 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="DK0-XZ-JuR"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK9-f7-Zcp">
+                                <rect key="frame" x="160" y="418" width="46" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="LKi-rQ-1rr" kind="show" id="Xfx-Jd-mg2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="762-pO-5ns"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--Tasting Select View Controller-->
+        <scene sceneID="fYu-5w-VMP">
+            <objects>
+                <viewController id="LKi-rQ-1rr" customClass="TastingSelectViewController" customModule="prac_collectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5dR-L1-z4X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="취향을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXo-AS-U58">
+                                <rect key="frame" x="30" y="118" width="136.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="좋아하는 베이스가 있나요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZzP-pS-ySK">
+                                <rect key="frame" x="30" y="168.5" width="354" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Uyf-Ad-EzW">
+                                <rect key="frame" x="12" y="204" width="390" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNL-ft-dOq" customClass="SelectButton" customModule="prac_collectionView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="dcw-Io-U3e" userLabel="height = 45"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="kFi-ma-f7K" userLabel="width = 45"/>
+                                        </constraints>
+                                        <state key="normal" title="없음"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GnU-Z0-Qnp" customClass="SelectButton" customModule="prac_collectionView" customModuleProvider="target">
+                                        <rect key="frame" x="69" y="0.0" width="45" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="MB9-q6-17c"/>
+                                            <constraint firstAttribute="height" constant="45" id="ORK-rK-fYG"/>
+                                        </constraints>
+                                        <state key="normal" title="보드카"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iag-0S-AqN" customClass="SelectButton" customModule="prac_collectionView" customModuleProvider="target">
+                                        <rect key="frame" x="138" y="0.0" width="45" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Ivg-zS-Cv9"/>
+                                            <constraint firstAttribute="width" constant="45" id="kJH-dg-eDG"/>
+                                        </constraints>
+                                        <state key="normal" title="진"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhC-Dh-PTV" customClass="SelectButton" customModule="prac_collectionView" customModuleProvider="target">
+                                        <rect key="frame" x="207" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="ZwL-81-71Q"/>
+                                            <constraint firstAttribute="width" constant="45" id="n6K-FU-Svr"/>
+                                        </constraints>
+                                        <state key="normal" title="럼"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cK7-vE-Ie3" customClass="SelectButton" customModule="prac_collectionView" customModuleProvider="target">
+                                        <rect key="frame" x="276" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="1qS-pu-Ggq"/>
+                                            <constraint firstAttribute="width" constant="45" id="daP-Lu-ONo"/>
+                                        </constraints>
+                                        <state key="normal" title="위스키"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b7-da-afp" customClass="SelectButton" customModule="prac_collectionView" customModuleProvider="target">
+                                        <rect key="frame" x="345" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="Emw-pR-0va"/>
+                                            <constraint firstAttribute="height" constant="45" id="xUX-2I-Y1O"/>
+                                        </constraints>
+                                        <state key="normal" title="데낄라"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="XpS-Ay-zOe">
+                                <rect key="frame" x="30" y="299" width="354" height="65.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="단맛의 정도를 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYh-s0-POJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="n0W-VN-H11" customClass="TasteSlider" customModule="prac_collectionView" customModuleProvider="target">
+                                        <rect key="frame" x="-2" y="35.5" width="358" height="31"/>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Jyk-aQ-sTl">
+                                <rect key="frame" x="30" y="394.5" width="354" height="64.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신맛의 정도를 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d33-gb-jUF">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rFO-I8-m5b" customClass="TasteSlider" customModule="prac_collectionView" customModuleProvider="target">
+                                        <rect key="frame" x="-2" y="34.5" width="358" height="31"/>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Lny-qI-08t">
+                                <rect key="frame" x="30" y="489" width="354" height="64.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쓴맛의 정도를 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFa-nD-WID">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YdS-ZJ-RuG" customClass="TasteSlider" customModule="prac_collectionView" customModuleProvider="target">
+                                        <rect key="frame" x="-2" y="34.5" width="358" height="31"/>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="JvZ-mt-7MQ">
+                                <rect key="frame" x="30" y="583.5" width="354" height="64.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="드라이한 정도를 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VN-IM-UCe">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Bx1-ro-RTh" customClass="TasteSlider" customModule="prac_collectionView" customModuleProvider="target">
+                                        <rect key="frame" x="-2" y="34.5" width="358" height="31"/>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lTU-wd-i3S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jyk-aQ-sTl" firstAttribute="top" secondItem="XpS-Ay-zOe" secondAttribute="bottom" constant="30" id="3Y4-U5-M0U"/>
+                            <constraint firstItem="ZzP-pS-ySK" firstAttribute="leading" secondItem="lTU-wd-i3S" secondAttribute="leading" constant="30" id="Eup-2C-J4D"/>
+                            <constraint firstItem="Lny-qI-08t" firstAttribute="centerX" secondItem="5dR-L1-z4X" secondAttribute="centerX" id="Fvb-E5-rL1"/>
+                            <constraint firstAttribute="trailing" secondItem="Jyk-aQ-sTl" secondAttribute="trailing" constant="30" id="GqE-JK-Unv"/>
+                            <constraint firstItem="XpS-Ay-zOe" firstAttribute="top" secondItem="Uyf-Ad-EzW" secondAttribute="bottom" constant="50" id="NZL-DR-3hv"/>
+                            <constraint firstItem="JvZ-mt-7MQ" firstAttribute="leading" secondItem="5dR-L1-z4X" secondAttribute="leading" constant="30" id="Pva-GP-Hvb"/>
+                            <constraint firstItem="XpS-Ay-zOe" firstAttribute="centerX" secondItem="5dR-L1-z4X" secondAttribute="centerX" id="RI9-3F-nPG"/>
+                            <constraint firstItem="kXo-AS-U58" firstAttribute="top" secondItem="lTU-wd-i3S" secondAttribute="top" constant="30" id="YXO-16-fik"/>
+                            <constraint firstItem="Jyk-aQ-sTl" firstAttribute="leading" secondItem="5dR-L1-z4X" secondAttribute="leading" constant="30" id="Yxh-5L-UXo"/>
+                            <constraint firstItem="lTU-wd-i3S" firstAttribute="trailing" secondItem="Lny-qI-08t" secondAttribute="trailing" constant="30" id="Z0Z-gJ-QPP"/>
+                            <constraint firstItem="XpS-Ay-zOe" firstAttribute="leading" secondItem="lTU-wd-i3S" secondAttribute="leading" constant="30" id="cG9-be-bw2"/>
+                            <constraint firstItem="Lny-qI-08t" firstAttribute="leading" secondItem="lTU-wd-i3S" secondAttribute="leading" constant="30" id="cMn-xU-xr6"/>
+                            <constraint firstAttribute="trailing" secondItem="JvZ-mt-7MQ" secondAttribute="trailing" constant="30" id="cXZ-X7-XO0"/>
+                            <constraint firstItem="JvZ-mt-7MQ" firstAttribute="centerX" secondItem="5dR-L1-z4X" secondAttribute="centerX" id="eM1-RH-xth"/>
+                            <constraint firstItem="lTU-wd-i3S" firstAttribute="trailing" secondItem="ZzP-pS-ySK" secondAttribute="trailing" constant="30" id="fdY-ww-cAD"/>
+                            <constraint firstItem="JvZ-mt-7MQ" firstAttribute="top" secondItem="Lny-qI-08t" secondAttribute="bottom" constant="30" id="grc-xz-8jI"/>
+                            <constraint firstItem="lTU-wd-i3S" firstAttribute="trailing" secondItem="XpS-Ay-zOe" secondAttribute="trailing" constant="30" id="hmR-1P-SxS"/>
+                            <constraint firstItem="ZzP-pS-ySK" firstAttribute="top" secondItem="kXo-AS-U58" secondAttribute="bottom" constant="30" id="j4o-wk-r9b"/>
+                            <constraint firstItem="kXo-AS-U58" firstAttribute="leading" secondItem="lTU-wd-i3S" secondAttribute="leading" constant="30" id="mV2-VM-YgR"/>
+                            <constraint firstItem="Uyf-Ad-EzW" firstAttribute="top" secondItem="ZzP-pS-ySK" secondAttribute="bottom" constant="15" id="p2d-Ch-lM3"/>
+                            <constraint firstItem="Jyk-aQ-sTl" firstAttribute="centerX" secondItem="5dR-L1-z4X" secondAttribute="centerX" id="qES-iU-XGJ"/>
+                            <constraint firstItem="Lny-qI-08t" firstAttribute="top" secondItem="Jyk-aQ-sTl" secondAttribute="bottom" constant="30" id="qRN-no-MuC"/>
+                            <constraint firstItem="Uyf-Ad-EzW" firstAttribute="centerX" secondItem="5dR-L1-z4X" secondAttribute="centerX" id="wCX-gM-NlV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wCF-9X-wge"/>
+                    <connections>
+                        <outlet property="GinBaseButton" destination="Iag-0S-AqN" id="UIF-ZF-zTK"/>
+                        <outlet property="RumBaseButton" destination="ZhC-Dh-PTV" id="p7i-WJ-1kB"/>
+                        <outlet property="TequilaBaseButton" destination="8b7-da-afp" id="7sr-g2-Jfe"/>
+                        <outlet property="VodkaBaseButton" destination="GnU-Z0-Qnp" id="yoy-ch-A4k"/>
+                        <outlet property="WiskyBaseButton" destination="cK7-vE-Ie3" id="nLY-mu-eej"/>
+                        <outlet property="bitterSlider" destination="YdS-ZJ-RuG" id="H9g-Gj-iV2"/>
+                        <outlet property="drySlider" destination="Bx1-ro-RTh" id="fnq-To-7Kx"/>
+                        <outlet property="nullBaseButton" destination="eNL-ft-dOq" id="Ve1-Hy-MgP"/>
+                        <outlet property="sourSlider" destination="rFO-I8-m5b" id="e8L-Jx-xE3"/>
+                        <outlet property="stackView" destination="Uyf-Ad-EzW" id="l9o-Wj-9IY"/>
+                        <outlet property="sweetSlider" destination="n0W-VN-H11" id="fmY-PR-l7g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Qw-KC-MAt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815.94202898550736" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>
