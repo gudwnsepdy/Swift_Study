@@ -24,7 +24,15 @@ class ViewController: UIViewController {
         print(id)
     }
     
+    func onSignUpVCAction(data: String)
+    {
+        self.id = data
+    }
     
+    func onSignUpVCAction2(data: String)
+    {
+        self.pw = data
+    }
     @IBAction func signInAction(_ sender: Any) {
         if idTextField.text == id && pwTextField.text == pw {
 //            let vcName = self.storyboard?.instantiateViewController(identifier: "ShowingIDViewController")
@@ -34,7 +42,9 @@ class ViewController: UIViewController {
 //            vcName.
             if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ShowingIDViewController") as? ShowingIDViewController {
                 if let passingData = idTextField.text {
+                    nextVC.mainVC = self
                     nextVC.idText = passingData
+//                    nextVC.mainVC = self
                     self.navigationController?.pushViewController(nextVC, animated: true)
                 }
             }
@@ -48,22 +58,35 @@ class ViewController: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        
-        guard let nextViewController: ShowingIDViewController = segue.destination as? ShowingIDViewController else {
-            return
-        }
-        
-        if let idStr = idTextField.text {
-            nextViewController.idText = idStr
-        }
-        
+    @IBAction func signUpAction(_ sender: Any) {
+      
+            if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController {
+                    nextVC.mainVC = self
+//                    nextVC.mainVC = self
+                    self.navigationController?.pushViewController(nextVC, animated: true)
+                }
+//            self.navigationController?.pushViewController(nextVc!, animated: true)
+            
         
         
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destination.
+//        // Pass the selected object to the new view controller.
+//
+//        guard let nextViewController: ShowingIDViewController = segue.destination as? ShowingIDViewController else {
+//            return
+//        }
+//
+//        if let idStr = idTextField.text {
+//            nextViewController.idText = idStr
+//        }
+//
+//
+//
+//    }
+//
 }
 
 

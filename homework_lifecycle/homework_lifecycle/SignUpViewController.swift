@@ -6,13 +6,12 @@
 //
 
 import UIKit
-protocol SignUpDelegate : class {
-    func didSelectTag(tags: [String])
-}
+
 class SignUpViewController: UIViewController {
 
 //    weak var delegate: SignUpDelegate?
-    var delegate : SignUpDelegate?
+    var mainVC : ViewController?
+    
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var pwcheckTextField: UITextField!
@@ -37,9 +36,13 @@ class SignUpViewController: UIViewController {
                             nextVC.id = idText
                             nextVC.pw = pwText
 //                            self.navigationController?.pushViewController(nextVC, animated: true)
-                            let infoList = [idText, pwText]
-                            delegate?.didSelectTag(tags: infoList)
+                            mainVC?.onSignUpVCAction(data: idText)
+                            mainVC?.onSignUpVCAction2(data: pwText)
                             self.navigationController?.popViewController(animated: true)
+//                            let infoList = [idText, pwText]
+//                            delegate?.didSelectTag(tags: infoList)
+                            
+//                            self.navigationController?.popViewController(animated: true)
                         }
                     }
                     else {
