@@ -15,6 +15,7 @@ class ShowingIDViewController: UIViewController {
     
     @IBOutlet weak var idLabel: UILabel!
 //    @IBOutlet weak var backBtn: uibackbutton!
+    
     func onVCAction(data: String)
     {
         self.idText = data
@@ -26,33 +27,7 @@ class ShowingIDViewController: UIViewController {
         self.pwText = data
         
     }
-    @IBAction func changeInfo(_ sender: Any) {
-        
-        if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ChangeInfoViewController") as? ChangeInfoViewController {
-            nextVC.previousID = idText
-            nextVC.previousVC = self
-            self.navigationController?.pushViewController(nextVC, animated: true)
-            
-        }
-//            self.navigationController?.pushViewController(nextVc!, animated: true)
-        
-    }
-    
-    @IBAction func backButton(_sender: UIBarButtonItem){
-        if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
-            nextVC.id = idText
-            nextVC.pw = pwText
-//                            self.navigationController?.pushViewController(nextVC, animated: true)
-            mainVC?.onSignUpVCAction(data: idText)
-            mainVC?.onSignUpVCAction2(data: pwText)
-            self.navigationController?.popViewController(animated: true)
-//                            let infoList = [idText, pwText]
-//                            delegate?.didSelectTag(tags: infoList)
-            
-//                            self.navigationController?.popViewController(animated: true)
-        }
-    }
-    
+    //MARK: - 화면생명주기
     override func viewWillDisappear(_ animated: Bool) {
         if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
             nextVC.id = idText
@@ -73,6 +48,36 @@ class ShowingIDViewController: UIViewController {
         
         idLabel.text = idText + "님"
     }
+    
+    //MARK: - 액션
+    @IBAction func changeInfo(_ sender: Any) {
+        
+        if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ChangeInfoViewController") as? ChangeInfoViewController {
+            nextVC.previousID = idText
+            nextVC.previousVC = self
+            self.navigationController?.pushViewController(nextVC, animated: true)
+            
+        }
+//            self.navigationController?.pushViewController(nextVc!, animated: true)
+        
+    }
+    
+    @IBAction func backButton(_sender: UIButton){
+        if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
+            nextVC.id = idText
+            nextVC.pw = pwText
+//                            self.navigationController?.pushViewController(nextVC, animated: true)
+            mainVC?.onSignUpVCAction(data: idText)
+            mainVC?.onSignUpVCAction2(data: pwText)
+            self.navigationController?.popViewController(animated: true)
+//                            let infoList = [idText, pwText]
+//                            delegate?.didSelectTag(tags: infoList)
+            
+//                            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    
     
 
     /*

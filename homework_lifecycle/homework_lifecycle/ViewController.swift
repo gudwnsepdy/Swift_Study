@@ -24,6 +24,11 @@ class ViewController: UIViewController {
         print(id)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        idTextField.text = ""
+        pwTextField.text = ""
+    }
+    
     func onSignUpVCAction(data: String)
     {
         self.id = data
@@ -44,6 +49,7 @@ class ViewController: UIViewController {
                 if let passingData = idTextField.text {
                     nextVC.mainVC = self
                     nextVC.idText = passingData
+                    nextVC.pwText = pwTextField.text!
 //                    nextVC.mainVC = self
                     self.navigationController?.pushViewController(nextVC, animated: true)
                 }

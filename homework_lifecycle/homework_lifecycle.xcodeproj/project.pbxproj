@@ -64,16 +64,24 @@
 			children = (
 				D6C02B392696064A003AEA73 /* AppDelegate.swift */,
 				D6C02B3B2696064A003AEA73 /* SceneDelegate.swift */,
-				D6C02B3D2696064A003AEA73 /* ViewController.swift */,
-				D6C02B4D26972286003AEA73 /* SignUpViewController.swift */,
-				D6C02B4F26972294003AEA73 /* ShowingIDViewController.swift */,
-				D6C02B512697229F003AEA73 /* ChangeInfoViewController.swift */,
+				D6C02B5326996291003AEA73 /* ViewController */,
 				D6C02B3F2696064A003AEA73 /* Main.storyboard */,
 				D6C02B422696064B003AEA73 /* Assets.xcassets */,
 				D6C02B442696064B003AEA73 /* LaunchScreen.storyboard */,
 				D6C02B472696064B003AEA73 /* Info.plist */,
 			);
 			path = homework_lifecycle;
+			sourceTree = "<group>";
+		};
+		D6C02B5326996291003AEA73 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6C02B3D2696064A003AEA73 /* ViewController.swift */,
+				D6C02B4D26972286003AEA73 /* SignUpViewController.swift */,
+				D6C02B4F26972294003AEA73 /* ShowingIDViewController.swift */,
+				D6C02B512697229F003AEA73 /* ChangeInfoViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

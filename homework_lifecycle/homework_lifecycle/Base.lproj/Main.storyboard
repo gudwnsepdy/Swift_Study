@@ -103,14 +103,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIq-TN-frw">
+                                <rect key="frame" x="181" y="546.5" width="52" height="30"/>
+                                <state key="normal" title="돌아가기"/>
+                                <connections>
+                                    <action selector="backButtonWith_sender:" destination="8uH-BP-Mm4" eventType="touchUpInside" id="MBE-NE-lIm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nGg-ee-7Qd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Rlm-8B-Jpv" firstAttribute="centerY" secondItem="RQi-f3-oxG" secondAttribute="centerY" id="1Ac-NX-g6a"/>
+                            <constraint firstItem="jIq-TN-frw" firstAttribute="top" secondItem="NAI-Z1-KjK" secondAttribute="bottom" constant="30" id="Cr8-da-hMI"/>
                             <constraint firstItem="NAI-Z1-KjK" firstAttribute="top" secondItem="Rlm-8B-Jpv" secondAttribute="bottom" constant="20" id="S0J-Sw-RQv"/>
                             <constraint firstItem="Rlm-8B-Jpv" firstAttribute="centerX" secondItem="RQi-f3-oxG" secondAttribute="centerX" id="fVe-F8-9eJ"/>
                             <constraint firstItem="NAI-Z1-KjK" firstAttribute="centerX" secondItem="RQi-f3-oxG" secondAttribute="centerX" id="jqV-69-4PH"/>
+                            <constraint firstItem="jIq-TN-frw" firstAttribute="centerX" secondItem="RQi-f3-oxG" secondAttribute="centerX" id="uAa-nb-myo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="jOj-8y-RgC">
@@ -315,13 +324,21 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원 정보를 등록해 주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBU-bb-6JL">
+                                <rect key="frame" x="117.5" y="300.5" width="179.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ci8-Fc-7fz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="igp-xt-joc" firstAttribute="centerY" secondItem="a4U-Tw-lY1" secondAttribute="centerY" id="PY8-h6-YvH"/>
+                            <constraint firstItem="igp-xt-joc" firstAttribute="top" secondItem="EBU-bb-6JL" secondAttribute="bottom" constant="40" id="UoE-R1-Iwu"/>
                             <constraint firstItem="OG7-WT-eCx" firstAttribute="leading" secondItem="Ci8-Fc-7fz" secondAttribute="leading" constant="30" id="X76-FN-CdQ"/>
                             <constraint firstItem="OG7-WT-eCx" firstAttribute="top" secondItem="igp-xt-joc" secondAttribute="bottom" constant="30" id="izq-3G-UuN"/>
+                            <constraint firstItem="EBU-bb-6JL" firstAttribute="centerX" secondItem="a4U-Tw-lY1" secondAttribute="centerX" id="jey-t9-aeb"/>
                             <constraint firstItem="Ci8-Fc-7fz" firstAttribute="trailing" secondItem="OG7-WT-eCx" secondAttribute="trailing" constant="30" id="oGf-Yh-Pff"/>
                             <constraint firstItem="igp-xt-joc" firstAttribute="leading" secondItem="Ci8-Fc-7fz" secondAttribute="leading" constant="30" id="oGv-MF-vE7"/>
                             <constraint firstItem="Ci8-Fc-7fz" firstAttribute="trailing" secondItem="igp-xt-joc" secondAttribute="trailing" constant="30" id="ylJ-0d-YAA"/>
@@ -336,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oF2-pn-p2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835" y="832"/>
+            <point key="canvasLocation" x="948" y="800"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZWk-fY-C8t">
