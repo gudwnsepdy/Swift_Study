@@ -41,6 +41,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return cell
     }
     
-
+    @IBAction func gohome(_ sender: Any) {
+        navigationController?.pushViewController(HomeViewController(nibName: "HomeViewController", bundle: nil), animated: true)
+//
+//        if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
+//                            self.navigationController?.pushViewController(nextVC, animated: true)
+//                    }
+    }
+    
+    
 }
 

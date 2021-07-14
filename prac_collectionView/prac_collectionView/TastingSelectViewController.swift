@@ -45,20 +45,7 @@ class TastingSelectViewController: UIViewController {
 
 }
 
-class SelectButton: UIButton {
-    required init?(coder aDecoder: NSCoder) {
-            super.init(coder: aDecoder)
-//        self.frame.size.width = UIScreen.main.bounds.width * 0.2
-//        self.frame.size.height = UIScreen.main.bounds.width * 0.2
-        self.backgroundColor = UIColor.white
-        self.setTitleColor(UIColor.black, for: .normal)
-        self.layer.cornerRadius = 7
-        self.layer.shadowColor = UIColor.gray.cgColor
-        self.layer.shadowOpacity = 1.0
-        self.layer.shadowOffset = CGSize(width: 1, height: 1)
-        self.layer.shadowRadius = 2
-        }
-}
+
 
 class TasteSlider: UISlider {
     required init?(coder aDecoder: NSCoder) {
