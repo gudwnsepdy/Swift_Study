@@ -7,26 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D66A4A2D269308E60082D0F0 /* TastingSelect2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A2C269308E60082D0F0 /* TastingSelect2ViewController.swift */; };
 		D66A4A2F2698784D0082D0F0 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A2E2698784D0082D0F0 /* PageViewController.swift */; };
-		D66A4A31269879310082D0F0 /* SelectBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A30269879310082D0F0 /* SelectBaseViewController.swift */; };
-		D66A4A332698795E0082D0F0 /* SelectSweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A322698795E0082D0F0 /* SelectSweetViewController.swift */; };
-		D66A4A35269879690082D0F0 /* SelectSourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A34269879690082D0F0 /* SelectSourViewController.swift */; };
-		D66A4A37269879720082D0F0 /* SelectBitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A36269879720082D0F0 /* SelectBitterViewController.swift */; };
-		D66A4A392698797F0082D0F0 /* SelectDryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A382698797F0082D0F0 /* SelectDryViewController.swift */; };
-		D66A4A3B269879910082D0F0 /* SelectAlcholViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A3A269879910082D0F0 /* SelectAlcholViewController.swift */; };
 		D66A4A3E2699EBC50082D0F0 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A3D2699EBC50082D0F0 /* ResultViewController.swift */; };
 		D66A4A402699EBF40082D0F0 /* CocktailResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A3F2699EBF40082D0F0 /* CocktailResultTableViewCell.swift */; };
-		D66A4A422699ECEB0082D0F0 /* 스크린샷 2021-07-10 오후 11.57.38.png in Resources */ = {isa = PBXBuildFile; fileRef = D66A4A412699ECEB0082D0F0 /* 스크린샷 2021-07-10 오후 11.57.38.png */; };
-		D66A4A46269AFB340082D0F0 /* ResultHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66A4A45269AFB340082D0F0 /* ResultHeaderView.xib */; };
 		D66A4A48269B26480082D0F0 /* Result2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A47269B26480082D0F0 /* Result2TableViewController.swift */; };
-		D66A4A53269C97DC0082D0F0 /* CocktailCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66A4A4A269C97DB0082D0F0 /* CocktailCollectionViewController.xib */; };
-		D66A4A54269C97DC0082D0F0 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66A4A4B269C97DB0082D0F0 /* HomeViewController.xib */; };
-		D66A4A55269C97DC0082D0F0 /* CocktailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66A4A4C269C97DB0082D0F0 /* CocktailCollectionViewCell.xib */; };
-		D66A4A56269C97DC0082D0F0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A4D269C97DB0082D0F0 /* HomeViewController.swift */; };
-		D66A4A57269C97DC0082D0F0 /* CocktailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A4E269C97DB0082D0F0 /* CocktailCollectionViewController.swift */; };
-		D66A4A59269C97DC0082D0F0 /* CocktailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A50269C97DB0082D0F0 /* CocktailCollectionViewCell.swift */; };
-		D66A4A5A269C97DC0082D0F0 /* CocktailCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A4A51269C97DB0082D0F0 /* CocktailCollectionView.swift */; };
 		D67A04F3268E03AF00E68A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A04F2268E03AF00E68A9F /* AppDelegate.swift */; };
 		D67A04F5268E03AF00E68A9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A04F4268E03AF00E68A9F /* SceneDelegate.swift */; };
 		D67A04F7268E03AF00E68A9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A04F6268E03AF00E68A9F /* ViewController.swift */; };
@@ -36,30 +20,15 @@
 		D67A050C268E051F00E68A9F /* CuratingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A050A268E051F00E68A9F /* CuratingCell.swift */; };
 		D67A050D268E051F00E68A9F /* CuratingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67A050B268E051F00E68A9F /* CuratingCell.xib */; };
 		D67A050F268E0F0D00E68A9F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A050E268E0F0D00E68A9F /* ImageCollectionViewCell.swift */; };
-		D6CD33342691D137002CAD6E /* TastingSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD33332691D137002CAD6E /* TastingSelectViewController.swift */; };
+		D6C02B57269F1853003AEA73 /* addViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C02B56269F1853003AEA73 /* addViewController.swift */; };
+		D6C02B59269F2956003AEA73 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C02B58269F2956003AEA73 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D66A4A2C269308E60082D0F0 /* TastingSelect2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingSelect2ViewController.swift; sourceTree = "<group>"; };
 		D66A4A2E2698784D0082D0F0 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		D66A4A30269879310082D0F0 /* SelectBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBaseViewController.swift; sourceTree = "<group>"; };
-		D66A4A322698795E0082D0F0 /* SelectSweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSweetViewController.swift; sourceTree = "<group>"; };
-		D66A4A34269879690082D0F0 /* SelectSourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSourViewController.swift; sourceTree = "<group>"; };
-		D66A4A36269879720082D0F0 /* SelectBitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBitterViewController.swift; sourceTree = "<group>"; };
-		D66A4A382698797F0082D0F0 /* SelectDryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDryViewController.swift; sourceTree = "<group>"; };
-		D66A4A3A269879910082D0F0 /* SelectAlcholViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAlcholViewController.swift; sourceTree = "<group>"; };
 		D66A4A3D2699EBC50082D0F0 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		D66A4A3F2699EBF40082D0F0 /* CocktailResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailResultTableViewCell.swift; sourceTree = "<group>"; };
-		D66A4A412699ECEB0082D0F0 /* 스크린샷 2021-07-10 오후 11.57.38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-07-10 오후 11.57.38.png"; sourceTree = "<group>"; };
-		D66A4A45269AFB340082D0F0 /* ResultHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultHeaderView.xib; sourceTree = "<group>"; };
 		D66A4A47269B26480082D0F0 /* Result2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result2TableViewController.swift; sourceTree = "<group>"; };
-		D66A4A4A269C97DB0082D0F0 /* CocktailCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CocktailCollectionViewController.xib; sourceTree = "<group>"; };
-		D66A4A4B269C97DB0082D0F0 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		D66A4A4C269C97DB0082D0F0 /* CocktailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CocktailCollectionViewCell.xib; sourceTree = "<group>"; };
-		D66A4A4D269C97DB0082D0F0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		D66A4A4E269C97DB0082D0F0 /* CocktailCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailCollectionViewController.swift; sourceTree = "<group>"; };
-		D66A4A50269C97DB0082D0F0 /* CocktailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailCollectionViewCell.swift; sourceTree = "<group>"; };
-		D66A4A51269C97DB0082D0F0 /* CocktailCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailCollectionView.swift; sourceTree = "<group>"; };
 		D67A04EF268E03AF00E68A9F /* prac_collectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prac_collectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D67A04F2268E03AF00E68A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D67A04F4268E03AF00E68A9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +40,8 @@
 		D67A050A268E051F00E68A9F /* CuratingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuratingCell.swift; sourceTree = "<group>"; };
 		D67A050B268E051F00E68A9F /* CuratingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CuratingCell.xib; sourceTree = "<group>"; };
 		D67A050E268E0F0D00E68A9F /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
-		D6CD33332691D137002CAD6E /* TastingSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingSelectViewController.swift; sourceTree = "<group>"; };
+		D6C02B56269F1853003AEA73 /* addViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addViewController.swift; sourceTree = "<group>"; };
+		D6C02B58269F2956003AEA73 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,18 +55,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D66A4A3C269880020082D0F0 /* Page */ = {
-			isa = PBXGroup;
-			children = (
-				D66A4A3A269879910082D0F0 /* SelectAlcholViewController.swift */,
-				D66A4A322698795E0082D0F0 /* SelectSweetViewController.swift */,
-				D66A4A34269879690082D0F0 /* SelectSourViewController.swift */,
-				D66A4A36269879720082D0F0 /* SelectBitterViewController.swift */,
-				D66A4A382698797F0082D0F0 /* SelectDryViewController.swift */,
-			);
-			path = Page;
-			sourceTree = "<group>";
-		};
 		D67A04E6268E03AF00E68A9F = {
 			isa = PBXGroup;
 			children = (
@@ -119,30 +77,19 @@
 				D67A04F2268E03AF00E68A9F /* AppDelegate.swift */,
 				D67A04F4268E03AF00E68A9F /* SceneDelegate.swift */,
 				D67A04F6268E03AF00E68A9F /* ViewController.swift */,
-				D6CD33332691D137002CAD6E /* TastingSelectViewController.swift */,
-				D66A4A2C269308E60082D0F0 /* TastingSelect2ViewController.swift */,
 				D67A050A268E051F00E68A9F /* CuratingCell.swift */,
 				D67A050B268E051F00E68A9F /* CuratingCell.xib */,
 				D67A050E268E0F0D00E68A9F /* ImageCollectionViewCell.swift */,
 				D66A4A2E2698784D0082D0F0 /* PageViewController.swift */,
 				D66A4A3D2699EBC50082D0F0 /* ResultViewController.swift */,
 				D66A4A3F2699EBF40082D0F0 /* CocktailResultTableViewCell.swift */,
-				D66A4A3C269880020082D0F0 /* Page */,
 				D67A04F8268E03AF00E68A9F /* Main.storyboard */,
+				D6C02B58269F2956003AEA73 /* DetailViewController.swift */,
+				D6C02B56269F1853003AEA73 /* addViewController.swift */,
 				D66A4A47269B26480082D0F0 /* Result2TableViewController.swift */,
-				D66A4A45269AFB340082D0F0 /* ResultHeaderView.xib */,
-				D66A4A30269879310082D0F0 /* SelectBaseViewController.swift */,
-				D66A4A412699ECEB0082D0F0 /* 스크린샷 2021-07-10 오후 11.57.38.png */,
 				D67A04FB268E03B000E68A9F /* Assets.xcassets */,
 				D67A04FD268E03B000E68A9F /* LaunchScreen.storyboard */,
 				D67A0500268E03B000E68A9F /* Info.plist */,
-				D66A4A51269C97DB0082D0F0 /* CocktailCollectionView.swift */,
-				D66A4A50269C97DB0082D0F0 /* CocktailCollectionViewCell.swift */,
-				D66A4A4C269C97DB0082D0F0 /* CocktailCollectionViewCell.xib */,
-				D66A4A4E269C97DB0082D0F0 /* CocktailCollectionViewController.swift */,
-				D66A4A4A269C97DB0082D0F0 /* CocktailCollectionViewController.xib */,
-				D66A4A4D269C97DB0082D0F0 /* HomeViewController.swift */,
-				D66A4A4B269C97DB0082D0F0 /* HomeViewController.xib */,
 			);
 			path = prac_collectionView;
 			sourceTree = "<group>";
@@ -206,13 +153,8 @@
 			files = (
 				D67A04FF268E03B000E68A9F /* LaunchScreen.storyboard in Resources */,
 				D67A04FC268E03B000E68A9F /* Assets.xcassets in Resources */,
-				D66A4A53269C97DC0082D0F0 /* CocktailCollectionViewController.xib in Resources */,
-				D66A4A422699ECEB0082D0F0 /* 스크린샷 2021-07-10 오후 11.57.38.png in Resources */,
 				D67A050D268E051F00E68A9F /* CuratingCell.xib in Resources */,
-				D66A4A46269AFB340082D0F0 /* ResultHeaderView.xib in Resources */,
 				D67A04FA268E03AF00E68A9F /* Main.storyboard in Resources */,
-				D66A4A55269C97DC0082D0F0 /* CocktailCollectionViewCell.xib in Resources */,
-				D66A4A54269C97DC0082D0F0 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,26 +165,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D66A4A3B269879910082D0F0 /* SelectAlcholViewController.swift in Sources */,
-				D66A4A37269879720082D0F0 /* SelectBitterViewController.swift in Sources */,
-				D66A4A5A269C97DC0082D0F0 /* CocktailCollectionView.swift in Sources */,
-				D66A4A31269879310082D0F0 /* SelectBaseViewController.swift in Sources */,
-				D66A4A392698797F0082D0F0 /* SelectDryViewController.swift in Sources */,
-				D66A4A59269C97DC0082D0F0 /* CocktailCollectionViewCell.swift in Sources */,
-				D66A4A57269C97DC0082D0F0 /* CocktailCollectionViewController.swift in Sources */,
+				D6C02B59269F2956003AEA73 /* DetailViewController.swift in Sources */,
 				D67A04F7268E03AF00E68A9F /* ViewController.swift in Sources */,
-				D66A4A56269C97DC0082D0F0 /* HomeViewController.swift in Sources */,
 				D66A4A3E2699EBC50082D0F0 /* ResultViewController.swift in Sources */,
-				D6CD33342691D137002CAD6E /* TastingSelectViewController.swift in Sources */,
 				D67A050F268E0F0D00E68A9F /* ImageCollectionViewCell.swift in Sources */,
 				D66A4A402699EBF40082D0F0 /* CocktailResultTableViewCell.swift in Sources */,
-				D66A4A2D269308E60082D0F0 /* TastingSelect2ViewController.swift in Sources */,
-				D66A4A35269879690082D0F0 /* SelectSourViewController.swift in Sources */,
 				D66A4A48269B26480082D0F0 /* Result2TableViewController.swift in Sources */,
-				D66A4A332698795E0082D0F0 /* SelectSweetViewController.swift in Sources */,
 				D67A04F3268E03AF00E68A9F /* AppDelegate.swift in Sources */,
 				D67A050C268E051F00E68A9F /* CuratingCell.swift in Sources */,
 				D67A04F5268E03AF00E68A9F /* SceneDelegate.swift in Sources */,
+				D6C02B57269F1853003AEA73 /* addViewController.swift in Sources */,
 				D66A4A2F2698784D0082D0F0 /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
