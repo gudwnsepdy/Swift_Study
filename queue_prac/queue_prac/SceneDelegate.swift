@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  prac_PageViewController
+//  queue_prac
 //
-//  Created by 형주 on 2021/07/03.
+//  Created by 형주 on 2021/07/17.
 //
 
 import UIKit

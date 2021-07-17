@@ -13,6 +13,7 @@ class CocktailResultTableViewCell: UITableViewCell {
     @IBOutlet weak var view:UIView!
     @IBOutlet weak var CocktailName: UILabel!
     @IBOutlet weak var CocktailInfo: UILabel!
+    @IBOutlet weak var heartImage: UIImageView!
     @IBOutlet weak var CocktailAlc: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -13,6 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var bvgName: UILabel!
     @IBOutlet weak var bvgCategory: UILabel!
+    @IBOutlet weak var heartImage: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +22,29 @@ class DetailViewController: UIViewController {
         imageView.image = photoList[idx]
         bvgName.text = photoNameList[idx]
         bvgCategory.text = bavCategory[idx]
+        if heartList[idx] == 1 {
+//            heartImage.image = UIImage(systemName: "heart.fill")
+            heartImage.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        }
+        else{
+            heartImage.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
     }
     
-
+    @IBAction func ClickHeart(_ sender: Any) {
+        if heartList[idx] == 1 {
+//            heartImage.image = UIImage(systemName: "heart.fill")
+            heartImage.setImage(UIImage(systemName: "heart"), for: .normal)
+            heartList[idx] = 0
+//            print(heartList)
+        }
+        else{
+            heartImage.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            heartList[idx] = 1
+//            print(heartList)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

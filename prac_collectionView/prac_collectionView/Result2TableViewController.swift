@@ -11,11 +11,13 @@ import Network
 var bavCategory: [String] = ["과실음료","스포츠음료","사이다","과실향탄삼으료","사이다","콜라","과재음료","커피","스포츠음료","콜라","이온음료"]
 var photoList: [UIImage] = [UIImage(named: "갈배")!, UIImage(named: "게토레이")! ,UIImage(named: "나랑드")!, UIImage(named: "웰치스")!, UIImage(named: "칠성사이다")!, UIImage(named: "코카콜라")!, UIImage(named: "코코팜")!, UIImage(named: "티오피")!, UIImage(named: "파워에이드")!, UIImage(named: "펩시")!, UIImage(named: "포카리")!]
 var photoNameList: [String] = ["갈배","게토레이","나랑드","웰치스","칠성사이다","코카콜라","코코팜","티오피","파워에이드","펩시","포카리"]
+var heartList: [Int] = [0,0,0,0,0,0,0,0,0,0,0]
 
 class Result2TableViewController: UITableViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+        print(heartList)
         tableView.reloadData()
         
     }
@@ -89,6 +91,12 @@ class Result2TableViewController: UITableViewController {
 //        cell.CocktailAlc?.text = "Alc 16.2"
 //        cell.layer.cornerRadius = 30
         cell.CocktailImage.layer.cornerRadius = 20
+        if heartList[indexPath.row] == 1 {
+            cell.heartImage?.image = UIImage(systemName: "heart.fill")
+        }
+        else{
+            cell.heartImage?.image = UIImage(systemName: "heart")
+        }
 //        cell.view.layer.cornerRadius = 0
 //        cell.view.layer.shadowColor = UIColor.gray.cgColor
 //        cell.view.layer.shadowOpacity = 1.0
@@ -137,6 +145,7 @@ class Result2TableViewController: UITableViewController {
             photoList.remove(at: (indexPath as NSIndexPath).row)
             photoNameList.remove(at: (indexPath as NSIndexPath).row)
             bavCategory.remove(at: (indexPath as NSIndexPath).row)
+            heartList.remove(at: (indexPath as NSIndexPath).row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -160,6 +169,10 @@ class Result2TableViewController: UITableViewController {
         let itemtoMove3 = bavCategory[(fromIndexPath as NSIndexPath).row]
         bavCategory.remove(at: (fromIndexPath as NSIndexPath).row)
         bavCategory.insert(itemtoMove3, at: (to as NSIndexPath).row)
+        
+        let itemtoMove4 = heartList[(fromIndexPath as NSIndexPath).row]
+        heartList.remove(at: (fromIndexPath as NSIndexPath).row)
+        heartList.insert(itemtoMove4, at: (to as NSIndexPath).row)
     }
     
 

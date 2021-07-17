@@ -82,6 +82,14 @@
                                                 <constraint firstItem="UFZ-Ov-por" firstAttribute="top" secondItem="jCw-65-arz" secondAttribute="top" id="ymh-Iy-Di0"/>
                                             </constraints>
                                         </view>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lg3-Zi-phI">
+                                            <rect key="frame" x="364" y="174.5" width="20" height="17.5"/>
+                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="0ny-Mu-VM3"/>
+                                                <constraint firstAttribute="height" constant="20" id="LV8-uf-LBl"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="nQp-AQ-Wg9" firstAttribute="leading" secondItem="jCw-65-arz" secondAttribute="trailing" constant="20" id="HdP-BE-AvB"/>
@@ -90,12 +98,15 @@
                                         <constraint firstItem="jCw-65-arz" firstAttribute="leading" secondItem="nRS-EW-Lmn" secondAttribute="leading" constant="20" id="exu-SO-vWV"/>
                                         <constraint firstItem="jCw-65-arz" firstAttribute="top" secondItem="nRS-EW-Lmn" secondAttribute="top" constant="20" id="jgS-fK-dmu"/>
                                         <constraint firstItem="nQp-AQ-Wg9" firstAttribute="centerY" secondItem="nRS-EW-Lmn" secondAttribute="centerY" id="ni0-3A-RV4"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lg3-Zi-phI" secondAttribute="bottom" constant="10" id="uNe-Oe-VT1"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lg3-Zi-phI" secondAttribute="trailing" constant="10" id="znT-Md-t2H"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="CocktailImage" destination="UFZ-Ov-por" id="yhL-u3-dTu"/>
                                     <outlet property="CocktailInfo" destination="2cU-Gj-7Wq" id="cQj-ku-FmO"/>
                                     <outlet property="CocktailName" destination="sTs-uG-P5I" id="Gwg-Ip-hC8"/>
+                                    <outlet property="heartImage" destination="lg3-Zi-phI" id="BFF-Ce-kAc"/>
                                     <outlet property="view" destination="jCw-65-arz" id="PA4-bl-mbQ"/>
                                     <segue destination="TYZ-YP-sWz" kind="show" identifier="sgDetail" id="Pzy-WW-tpm"/>
                                 </connections>
@@ -221,15 +232,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wr-DE-CbI">
+                                <rect key="frame" x="187" y="525.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7vK-2f-c3W"/>
+                                    <constraint firstAttribute="width" constant="40" id="Gvb-g6-pya"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="ClickHeart:" destination="TYZ-YP-sWz" eventType="touchUpInside" id="RUk-OM-mdR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JJQ-ua-gqO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="S90-HE-XiY" firstAttribute="centerX" secondItem="PWG-p9-H9d" secondAttribute="centerX" id="Egx-Sh-TAK"/>
                             <constraint firstItem="Ryv-A4-qYn" firstAttribute="centerX" secondItem="PWG-p9-H9d" secondAttribute="centerX" id="Lrl-Bd-xy1"/>
+                            <constraint firstItem="7wr-DE-CbI" firstAttribute="top" secondItem="Ryv-A4-qYn" secondAttribute="bottom" constant="10" id="WE2-QA-HrY"/>
                             <constraint firstItem="EeV-fn-NNn" firstAttribute="centerY" secondItem="PWG-p9-H9d" secondAttribute="centerY" id="WZt-HP-eMD"/>
                             <constraint firstItem="EeV-fn-NNn" firstAttribute="top" secondItem="S90-HE-XiY" secondAttribute="bottom" constant="50" id="b2M-Xa-W6B"/>
                             <constraint firstItem="EeV-fn-NNn" firstAttribute="centerX" secondItem="PWG-p9-H9d" secondAttribute="centerX" id="cGI-0I-taJ"/>
+                            <constraint firstItem="7wr-DE-CbI" firstAttribute="centerX" secondItem="PWG-p9-H9d" secondAttribute="centerX" id="jsT-2p-QZI"/>
                             <constraint firstItem="Ryv-A4-qYn" firstAttribute="top" secondItem="EeV-fn-NNn" secondAttribute="bottom" constant="20" id="wIL-ML-YH9"/>
                         </constraints>
                     </view>
@@ -237,6 +262,7 @@
                     <connections>
                         <outlet property="bvgCategory" destination="Ryv-A4-qYn" id="L1D-7c-ZKg"/>
                         <outlet property="bvgName" destination="EeV-fn-NNn" id="0KE-9X-yjv"/>
+                        <outlet property="heartImage" destination="7wr-DE-CbI" id="ACL-RL-mmG"/>
                         <outlet property="imageView" destination="S90-HE-XiY" id="4e9-9E-Dfb"/>
                     </connections>
                 </viewController>
@@ -389,6 +415,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

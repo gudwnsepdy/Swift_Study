@@ -51,6 +51,7 @@ class addViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         photoNameList.append(tf.text!)
         bavCategory.append(categoryTF.text!)
         photoList.append(imageView.image!)
+        heartList.append(0)
         self.navigationController?.popViewController(animated: true)
     }
     
