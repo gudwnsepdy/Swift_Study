@@ -6,7 +6,7 @@
 //
 
 import UIKit
-var imgSet : [UIImage] = [UIImage(named: "left_block")!, UIImage(named: "right_block")!]
+var imgSet : [UIImage] = [UIImage(named: "left_oak")!, UIImage(named: "right_oak")!]
 var hp = 3
 var imgArr : [UIImage] = [imgSet.randomElement()!,
                           imgSet.randomElement()!,
@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var heart1 : UIImageView!
     @IBOutlet weak var heart2 : UIImageView!
     @IBOutlet weak var fever_image: UIImageView!
+    @IBOutlet weak var gunImg: UIImageView!
     @IBOutlet weak var feverButton: UIButton!
     
     
@@ -47,19 +48,27 @@ class ViewController: UIViewController {
 //        self.wrong_imageView.isHidden = true
         self.wrong_imageView.alpha = 0.0
         self.fever_image.isHidden = true
+        self.gunImg.alpha = 0.0
         self.feverButton.isHidden = true
         self.feverButton.isEnabled = false
 //        self.game_over.isHidden = true
         img_update()
-        self.score_label.text = "\(score)"
+        self.score_label.text = " 현재 스코어 : "+"\(score)" + "💰 "
         self.navigationController?.isNavigationBarHidden = true
+        self.score_label.clipsToBounds = true
+        self.score_label.layer.cornerRadius = 13
     }
-
+    
+//    override func viewDidLayoutSubviews() {
+//        UIView.animate(withDuration: 0.0, animations: {
+//            self.imgStack_1.frame =  CGRect(x: self.imgStack_1.frame.minX, y: self.imgStack_1.frame.minY + 20,  width: self.imgStack_1.frame.width, height: self.imgStack_1.frame.height)
+//        })
+//    }
     
     //MARK: - 액션 함수
     @IBAction func touchLeftBtn(_ sender: Any) {
 //        print("\(imgArr[4])")
-        if "\(imgArr[0])" == "\(UIImage(named: "left_block")!)" {
+        if "\(imgArr[0])" == "\(UIImage(named: "left_oak")!)" {
             
             right()
 
@@ -73,7 +82,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchRightBtn(_ sender: Any) {
-        if "\(imgArr[0])" == "\(UIImage(named: "right_block")!)" {
+        if "\(imgArr[0])" == "\(UIImage(named: "right_oak")!)" {
             
             right()
             
@@ -92,8 +101,12 @@ class ViewController: UIViewController {
     
     //MARK: - Custom 함수
     func right() {
+        self.gunImg.alpha = 1.0
+        UIView.animate(withDuration: 0.7, animations: {
+            self.gunImg.alpha = 0.0
+        })
         score += 1
-        if score % 60 == 0 {
+        if score % 30 == 0 {
             self.feverButton.isEnabled = true
             self.feverButton.isHidden = false
         }
@@ -112,13 +125,13 @@ class ViewController: UIViewController {
 
         })
         
-        self.score_label.text = "\(self.score)"
+        self.score_label.text = " 현재 스코어 : "+"\(score)" + "💰 "
         imgArr.remove(at: 0)
         
         if isFever == false{
             imgArr.append(imgSet.randomElement()!)
         } else {
-            imgArr.append(UIImage(named: "left_block")!)
+            imgArr.append(UIImage(named: "left_oak")!)
         }
         imgStack_4.frame = origin_4
         imgStack_3.frame = origin_3
@@ -130,7 +143,7 @@ class ViewController: UIViewController {
     }
     
     func wrong() {
-        self.score_label.text = "\(score)"
+        self.score_label.text = " 현재 스코어 : "+"\(score)" + "💰 "
 //        self.wrong_imageView.isHidden = false
         self.wrong_imageView.alpha = 1.0
         UIView.animate(withDuration: 0.7, animations: {
@@ -186,7 +199,7 @@ class ViewController: UIViewController {
 //                })
             }
             
-            imgArr = [UIImage(named: "left_block")!,UIImage(named: "left_block")!,UIImage(named: "left_block")!,UIImage(named: "left_block")!,UIImage(named: "left_block")!]
+            imgArr = [UIImage(named: "left_oak")!,UIImage(named: "left_oak")!,UIImage(named: "left_oak")!,UIImage(named: "left_oak")!,UIImage(named: "left_oak")!]
             DispatchQueue.main.sync {
                 self.img_update()
             }
