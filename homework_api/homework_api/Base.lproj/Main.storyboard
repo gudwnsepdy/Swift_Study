@@ -15,16 +15,46 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fh9-1j-YAE">
+                                <rect key="frame" x="112" y="490.5" width="190" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="O7p-9s-NxW"/>
+                                </constraints>
+                                <state key="normal" image="kakao_login_medium_narrow"/>
+                                <connections>
+                                    <action selector="onKakaoLoginByWebTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="waj-Bf-MHT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAM-K6-no7">
+                                <rect key="frame" x="112" y="425.5" width="190" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="cX8-Xq-xAr"/>
+                                </constraints>
+                                <state key="normal" image="kakao_login_medium_narrow"/>
+                                <connections>
+                                    <action selector="onKakaoLoginByAppTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="weq-Lr-Ppw"/>
+                                    <action selector="onKakaoLoginByWebTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AbX-MA-3fG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WAM-K6-no7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="88D-bL-JID"/>
+                            <constraint firstItem="fh9-1j-YAE" firstAttribute="top" secondItem="WAM-K6-no7" secondAttribute="bottom" constant="20" id="RSM-op-I9C"/>
+                            <constraint firstItem="fh9-1j-YAE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bmZ-SP-Q02"/>
+                            <constraint firstItem="WAM-K6-no7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p8d-og-bH0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="72" y="110"/>
+            <point key="canvasLocation" x="71.014492753623188" y="109.82142857142857"/>
         </scene>
     </scenes>
     <resources>
+        <image name="kakao_login_medium_narrow" width="183" height="45"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

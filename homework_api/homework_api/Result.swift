@@ -5,9 +5,9 @@
 //  Created by 형주 on 2021/07/25.
 //
 
-struct result: Decodable {
+struct country: Decodable {
     let currentCount: Int
-    let data : countryInfo
+    let data : [countryInfo]?
 }
 
 struct countryInfo: Decodable {
