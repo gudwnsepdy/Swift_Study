@@ -8,4 +8,5 @@ target 'homework_api' do
   # Pods for homework_api
   pod 'Alamofire', '~> 5.4'
   pod 'KakaoSDK'
+  pod 'SwiftyJSON'
 end

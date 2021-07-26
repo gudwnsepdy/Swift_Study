@@ -9,67 +9,39 @@ import UIKit
 import KakaoSDKAuth
 import KakaoSDKUser
 import Alamofire
+import SwiftyJSON
 
 
+let APIkey = "UOmr7%2BwazwYpWR3qIDWPRlL5ktMmB0B8YEK39oOEz9JlWv23Cv2Sd4Jm8r1QUnkuK1kzF%2FkQF4A1YpQ1J5fosg%3D%3D"
 
 class ViewController: UIViewController {
-
+    var countries: country?
     @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        var APIResult: [country]?
-//        let url = "http://apis.data.go.kr/1262000/SptravelWarningService2/getSptravelWarningList2?serviceKey=UOmr7%2BwazwYpWR3qIDWPRlL5ktMmB0B8YEK39oOEz9JlWv23Cv2Sd4Jm8r1QUnkuK1kzF%2FkQF4A1YpQ1J5fosg%3D%3D&pageNo=1&numOfRows=10"
-        let url = "http://apis.data.go.kr/1262000/SptravelWarningService2/getSptravelWarningList2"
-//        let header : HTTPHeaders = ["content-type": "application/json"]
-        let param : Parameters = ["serviceKey":"UOmr7%2BwazwYpWR3qIDWPRlL5ktMmB0B8YEK39oOEz9JlWv23Cv2Sd4Jm8r1QUnkuK1kzF%2FkQF4A1YpQ1J5fosg%3D%3D",
-                      "pageNo":1,
-                      "numOfRows":10]
-        AF.request(url ,
-                   method: .get,
-                   parameters: param,
-                   encoding: JSONEncoding.default
-                   
-                   )
-                    .validate(statusCode: 0..<600)
-                    .responseJSON { response in
-                        switch response.result
-                        {
-                        case .success(_) :do {
-                            print("success")
-                            print(response.result)
-//                            APIResult = response.result
-                            }
-                        case .failure(let error):
-                            print("failure(error)",error)
-
-                            break
-                        }
-                    }
-    }
-    
-    func appflagsmountain() {
-//        let headers : HTTPHeaders = [ “X-ACCESS-TOKEN” : Constant.JWTToken ]
-//        let parameters : Parameters = [ “mountain” : mountainName]
-        let param : Parameters = ["serviceKey":"UOmr7%2BwazwYpWR3qIDWPRlL5ktMmB0B8YEK39oOEz9JlWv23Cv2Sd4Jm8r1QUnkuK1kzF%2FkQF4A1YpQ1J5fosg%3D%3D",
-                      "pageNo":1,
-                      "numOfRows":10]
-        AF.request("http://apis.data.go.kr/1262000/SptravelWarningService2/getSptravelWarningList2", method: .get, parameters: param).validate().responseJSON { response in
-          switch response.result {
-          case .success(let response):
-            if response.isSuccess, let result = response.result{
-              viewcontroller.successDataMountain(result)
-              print(“성공“)
+        var url = "https://openapi.naver.com/v1/papago/n2mt"
+        var params = ["source":"ko",
+                      "target":"en",
+                      "text":"안녕."]
+        var header: HTTPHeaders = ["Content-Type":"application/x-www-form-urlencoded; charset=UTF-8",
+                      "X-Naver-Client-Id":"QoVjI1DLJVsszuw6pl6B",
+                      "X-Naver-Client-Secret":"28r_GwpJTb"]
+        
+        AF.request(url,method: .post, parameters: params, headers: header).responseJSON{
+            response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                let result = json["message"]["result"]["translatedText"]
+                print(result)
+            case .failure(_):
+                return
             }
-            else {
-              viewcontroller.failureNoDataMountain(response.message)
-              print(“왜그래?“)
-            }
-          case .failure(let errror) :
-            viewcontroller.failureNoDataMountain(“네트워크가 연결되어 있지 않습니다.“)
-          }
         }
-      }
+        
+    }
+   
     @IBAction func onKakaoLoginByAppTouched(_ sender: Any) {
             // 카카오톡 설치 여부 확인
             if (UserApi.isKakaoTalkLoginAvailable()) {

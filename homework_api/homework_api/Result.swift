@@ -8,6 +8,10 @@
 struct country: Decodable {
     let currentCount: Int
     let data : [countryInfo]?
+    let numOfRows : Int
+    let resultCode : Int
+    let resultMsg : String
+    let totalCount : Int
 }
 
 struct countryInfo: Decodable {
