@@ -20,28 +20,31 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        var url = "https://openapi.naver.com/v1/papago/n2mt"
-        var params = ["source":"ko",
-                      "target":"en",
-                      "text":"안녕."]
-        var header: HTTPHeaders = ["Content-Type":"application/x-www-form-urlencoded; charset=UTF-8",
-                      "X-Naver-Client-Id":"QoVjI1DLJVsszuw6pl6B",
-                      "X-Naver-Client-Secret":"28r_GwpJTb"]
-        
-        AF.request(url,method: .post, parameters: params, headers: header).responseJSON{
+        AF.request("http://api.exchangeratesapi.io/v1/latest?access_key=59ba496813211c7d4056961e569ee43f",method: .get).responseJSON{
             response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                let result = json["message"]["result"]["translatedText"]
-                print(result)
+                print(json)
+                if let result = json["rates"]["KRW"].double {
+                    print(result)
+                }
+                if let result2 = json["rates"]["USD"].double {
+                    print(result2)
+                }
+//                self.resultText.text = result
+                
             case .failure(_):
                 return
             }
         }
         
     }
-   
+    @IBAction func ji(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(identifier: "SecondViewController")
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
     @IBAction func onKakaoLoginByAppTouched(_ sender: Any) {
             // 카카오톡 설치 여부 확인
             if (UserApi.isKakaoTalkLoginAvailable()) {
@@ -93,6 +96,7 @@ class ViewController: UIViewController {
                    print("me() success.")
                    //do something
                    _ = user
+                
 //                   self.label.text = user?.kakaoAccount?.profile?.nickname
                    
 //                   if let url = user?.kakaoAccount?.profile?.profileImageUrl,
@@ -101,6 +105,8 @@ class ViewController: UIViewController {
 //                   }
                }
            }
+        let vc = self.storyboard?.instantiateViewController(identifier: "SecondViewController")
+        self.navigationController?.pushViewController(vc!, animated: true)
        }
 }
 
